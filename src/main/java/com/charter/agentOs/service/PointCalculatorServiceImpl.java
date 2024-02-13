@@ -49,7 +49,7 @@ public class PointCalculatorServiceImpl implements PointCalculatorService{
         statementResponse.setError("Bad Request");
         return new ResponseEntity<>(statementResponse, HttpStatus.BAD_REQUEST);
 
-        return null;
+        //return null;
        // return total;
 
 
