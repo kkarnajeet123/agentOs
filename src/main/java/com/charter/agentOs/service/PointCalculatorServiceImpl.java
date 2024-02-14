@@ -13,10 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
-
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.*;
 
@@ -120,7 +117,7 @@ public class PointCalculatorServiceImpl implements PointCalculatorService {
         response.setData(responseData);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-
+@Override
     public ResponseEntity<PointStatementTotal> customerPointMap(Map<Long, Map<Month, Integer>> customerPointMap) {
         PointStatementTotal response = new PointStatementTotal();
         double sum = 0.0;
@@ -133,6 +130,7 @@ public class PointCalculatorServiceImpl implements PointCalculatorService {
         response.setData(getTotalPointValue(pointList));
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+    @Override
     public ResponseEntity<TotalPointsStatementForEachCustomer> calculateEachCustomerPoints(Map<Long,Map<Month, Integer>> customerPointMap ) {
         TotalPointsStatementForEachCustomer response = new TotalPointsStatementForEachCustomer();
         Map<Long,Double> eachCustomerTotalPoints = new Hashtable<>();
@@ -150,7 +148,7 @@ public class PointCalculatorServiceImpl implements PointCalculatorService {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    public Double getTotalPointValue(List<Double> pointList){
+    private Double getTotalPointValue(List<Double> pointList){
         double sum=0.0;
         for(Double d: pointList){
 

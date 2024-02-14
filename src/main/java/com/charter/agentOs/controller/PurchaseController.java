@@ -4,7 +4,6 @@ import com.charter.agentOs.model.Response.PointStatementTotal;
 import com.charter.agentOs.model.Response.PointsStatementMonthlyResponse;
 import com.charter.agentOs.service.PointCalculatorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
