@@ -14,7 +14,4 @@ public class CustomerInformation {
     private String email;
     private String phoneNumber;
     private List<PurchaseHistory> purchaseHistory;
- //   private long lineId;
-//    private Device device;
-
 }

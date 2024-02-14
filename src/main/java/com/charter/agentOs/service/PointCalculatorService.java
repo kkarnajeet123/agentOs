@@ -6,6 +6,6 @@ import org.springframework.http.ResponseEntity;
 
 public interface PointCalculatorService {
 
-    ResponseEntity<PointsStatementMonthlyResponse> calculateCustomerPointPerMonth(int customerId);
-    ResponseEntity<PointStatementTotal> calculateCustomerPointTotal(int customerId);
+    ResponseEntity<PointsStatementMonthlyResponse> calculateCustomerPointPerMonth(int customerId, String statementDate);
+    ResponseEntity<PointsStatementMonthlyResponse> calculateAllCustomerPointPerMonth(String statementDate);
 }

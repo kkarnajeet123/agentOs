@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -12,5 +13,5 @@ import java.util.Date;
 public class PurchaseHistory {
     private String product;
     private double purchasePrice;
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
 }
